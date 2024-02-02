@@ -6,6 +6,7 @@ import java.util.Set;
 public class Main {
 
     /*
+    *   COMPLEXITY: O(n^4)
     *   input - n cents to be divided into coins: quaters, dimes, nickels and pennies
     *   return - A Set of integer arrays containing [quaters, dimes, nickels, pennies]
     *
@@ -74,7 +75,7 @@ public class Main {
 
     public static void main(String[] args) {
         // Initialize value
-        int n = 11;
+        int n = 20;
         // Call method that will execute the algorithm
         Set<int[]> ways = makeChange(n);
         // Show the solution found
