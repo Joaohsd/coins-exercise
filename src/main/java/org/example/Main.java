@@ -21,15 +21,15 @@ public class Main {
     *       -   Core of the algorithm:
     *           -   Iterate through all combinations possible according to the restrictions:
     *               -   coin_i should not be greater than coinMax value possible, because:
-    *                                coin_i * coinValue > coinMax * coinValue
+    *                                coin_i * coinValue <= coinMax * coinValue
     *               -   The value of iteration number should not be greater than n cents value, because:
-    *                   -   For pennies, its number of coins (p_i) cannot be greater than n cents value;
+    *                   -   For pennies, its number of coins (p_i) multiplied by pValue cannot be greater than n cents value;
     *                   -   As we are doing combinations of set values, the instantaneous values of iterations variable
-    *                       should respect the condition that does not exceed the n cents value;
+    *                       should respect the condition to not exceed the n cents value;
     *                   -   For quaters, as it is the last for, the sum:
     *                           p_i * pValue + n_i * nValue + d_i * dValue + q_i * qValue
     *                       should not be greater than n cents values.
-    *           -   If the combination [q_i, d_i, n_i, p_i] multiplied by its coin value if equal to n:
+    *           -   If the combination [q_i, d_i, n_i, p_i] multiplied by its coin value is equal to n:
     *                   -   Add solution to the Set of solutions;
     *           -   Otherwise:
     *                   -   Continue the algorithm;
